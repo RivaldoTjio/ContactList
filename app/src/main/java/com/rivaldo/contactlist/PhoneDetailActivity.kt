@@ -15,6 +15,7 @@ class PhoneDetailActivity : AppCompatActivity() {
         if (intentThatStartedThisActivity.hasExtra(Intent.EXTRA_TEXT)) {
             var partId = intentThatStartedThisActivity.getStringExtra(Intent.EXTRA_TEXT)
             tv_item_id.text = partId
+            tv_item_name.text = intentThatStartedThisActivity.getStringExtra(Intent.EXTRA_COMPONENT_NAME)
         }
     }
 }

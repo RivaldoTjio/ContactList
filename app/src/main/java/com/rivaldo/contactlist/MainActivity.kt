@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity() {
     private fun phoneItemClicked(phoneItem: PhoneData) {
         val showDetailActivityIntent = Intent(this, PhoneDetailActivity::class.java)
     showDetailActivityIntent.putExtra(Intent.EXTRA_TEXT, phoneItem.phone.toString())
+        showDetailActivityIntent.putExtra(Intent.EXTRA_COMPONENT_NAME, phoneItem.contactName.toString())
         startActivity(showDetailActivityIntent)
     }
 
